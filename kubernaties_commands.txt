@@ -1,7 +1,7 @@
 cd webapp
 docker build -t webapp:dev .
 
-ubectl config set-context --current --namespace=development
+kubectl config set-context --current --namespace=development
 kubectl apply -f dev-app.yml 
 kubectl config view | grep namespace
 
